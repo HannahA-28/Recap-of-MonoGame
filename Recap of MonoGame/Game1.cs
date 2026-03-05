@@ -23,6 +23,8 @@ namespace Recap_of_MonoGame
 
         SpriteFont titleFont;
 
+        float angle;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -41,6 +43,8 @@ namespace Recap_of_MonoGame
 
             generator = new Random();
             shipTextures = new List<Texture2D>();
+
+            angle = 1.5f;
 
             shipRect = new Rectangle(generator.Next(window.Width-75), generator.Next(window.Height-100), 75, 100);
 
@@ -80,7 +84,7 @@ namespace Recap_of_MonoGame
 
             _spriteBatch.Draw(backgroundTexture, window, Color.White);
             _spriteBatch.DrawString(titleFont, "Space", new Vector2(300, 10), Color.HotPink);
-            _spriteBatch.Draw(shipTexture, shipRect, Color.White * 0.5f);
+            _spriteBatch.Draw(shipTexture, shipRect, null,  Color.White * 0.5f, angle, new Vector2(shipTexture.Width());
 
             _spriteBatch.End();
 
