@@ -84,7 +84,7 @@ namespace Recap_of_MonoGame
 
             _spriteBatch.Draw(backgroundTexture, window, Color.White);
             _spriteBatch.DrawString(titleFont, "Space", new Vector2(300, 10), Color.HotPink);
-            _spriteBatch.Draw(shipTexture, shipRect, null,  Color.White * 0.5f, angle, new Vector2(shipTexture.Width());
+            _spriteBatch.Draw(shipTexture, shipRect, null,  Color.White, angle, new Vector2(shipTexture.Width/2, shipTexture.Height/2), SpriteEffects.None, 1f);
 
             _spriteBatch.End();
 
